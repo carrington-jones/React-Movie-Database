@@ -8,6 +8,7 @@ import HeroImage from "./HeroImage";
 import Grid from "./Grid";
 import Thumb from './Thumb';
 import Spinner from "./Spinner";
+import SearchBar from "./SearchBar";
 //Hooks
 import {useHomeFetch} from '../hooks/useHomeFetch'
 //Image
@@ -27,17 +28,18 @@ const Home = () => {
                     text={state.results[0].overview}
                 />
             ) : null}
+            <SearchBar/>
             <Grid header='Popular Movies'>
                 {state.results.map(movie => (
                     <Thumb
-                    key={movie.id}
-                    clickable
-                    image={ //Checks API if there is movie poster. If not uses default "No image" picture.
-                        movie.poster_path
-                            ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
-                            : NoImage
-                    }
-                    movieId={movie.id}
+                        key={movie.id}
+                        clickable
+                        image={ //Checks API if there is movie poster. If not uses default "No image" picture.
+                            movie.poster_path
+                                ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
+                                : NoImage
+                        }
+                        movieId={movie.id}
                     />
                 ))}
             </Grid>
