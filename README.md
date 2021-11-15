@@ -14,5 +14,5 @@ Modern fast movie database web app with React using The Movie DB API. All the ne
 
 Source: [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction)
 
-Page: [React Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)
+Page: [React Movie Database](https://determined-hodgkin-4c9ec3.netlify.app/451048)
 
